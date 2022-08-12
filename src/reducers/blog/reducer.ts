@@ -1,0 +1,30 @@
+import { api } from '../../services/api'
+import { IAuthorInfo } from '../interfaces/IAuthorInfo'
+import { BlogActionTypes } from './actions'
+
+export interface IBlogState {
+  authorInfo: IAuthorInfo
+}
+
+export function blogReducer(state: IBlogState, action: any) {
+  switch (action.type) {
+    case BlogActionTypes.INITIALIZE_STATE: {
+      return action.payload
+    }
+    default:
+      return state
+  }
+}
+
+export async function initializerState(): Promise<IBlogState> {
+  try {
+    const response = await api.get<IAuthorInfo>('/users/Cahmoraes')
+    const { data } = response
+    return {
+      authorInfo: data,
+    }
+  } catch (error) {
+    console.log(error)
+    return {} as IBlogState
+  }
+}
