@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     background: ${(props) => props.theme['base-background']};
     color: ${(props) => props.theme['base-text']};
@@ -14,10 +18,19 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button {
-    font: 400 1rem 'Nunito', sans-serif;
+    font: 400 1.6rem 'Nunito', sans-serif;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
   }
 
   button {
     cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
   }
 `

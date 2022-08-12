@@ -1,6 +1,12 @@
 import { useBlog } from '../../hooks/useBlog'
-import { ArrowUpIcon } from '../Icons'
-import { AuthorSummaryContainer } from './styles'
+import { ArrowUpIcon, BuildingIcon, GithubIcon, UserGroupIcon } from '../Icons'
+import {
+  AuthorSummaryContainer,
+  Avatar,
+  Description,
+  CallToAction,
+  Info,
+} from './styles'
 
 export function AuthorSummary() {
   const {
@@ -8,21 +14,39 @@ export function AuthorSummary() {
   } = useBlog()
   return (
     <AuthorSummaryContainer>
-      <div>
+      <Avatar>
         <img src={authorInfo?.avatar_url} alt={authorInfo?.login} />
-      </div>
+      </Avatar>
 
-      <div>
+      <Description>
         <div>
           <h2>{authorInfo?.login}</h2>
-          <span>
-            <a href={authorInfo?.html_url} target="_blank" rel="noreferrer">
-              github <ArrowUpIcon />
-            </a>
-          </span>
-          <p>{authorInfo?.bio}</p>
+          <CallToAction
+            href={authorInfo?.html_url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            github <ArrowUpIcon />
+          </CallToAction>
         </div>
-      </div>
+
+        <p>{authorInfo?.bio}</p>
+
+        <Info>
+          <li>
+            <GithubIcon />
+            <span>{authorInfo?.login}</span>
+          </li>
+          <li>
+            <BuildingIcon />
+            <span>{authorInfo?.company}</span>
+          </li>
+          <li>
+            <UserGroupIcon />
+            <span>{authorInfo?.followers} seguidores</span>
+          </li>
+        </Info>
+      </Description>
     </AuthorSummaryContainer>
   )
 }

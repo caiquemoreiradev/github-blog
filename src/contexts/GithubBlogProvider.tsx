@@ -19,6 +19,7 @@ interface GithubBlogProviderProps {
 export function GithubBlogProvider({ children }: GithubBlogProviderProps) {
   const [blogState, dispatch] = useReducer(blogReducer, {} as IBlogState)
 
+  // Inicializa o estado global da aplicação
   useEffect(() => {
     initializerState().then((initialState) => {
       dispatch(initializeAction(initialState))

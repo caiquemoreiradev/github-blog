@@ -6,5 +6,5 @@ export const HeaderContainer = styled.header`
   place-items: center;
   background: url(${bannerImg}) no-repeat center center;
   background-size: cover;
-  padding: 66px 0 104px;
+  padding: 6.6rem 0 10.4rem;
 `

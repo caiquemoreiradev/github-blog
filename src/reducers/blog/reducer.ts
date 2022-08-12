@@ -6,7 +6,12 @@ export interface IBlogState {
   authorInfo: IAuthorInfo
 }
 
-export function blogReducer(state: IBlogState, action: any) {
+interface IBlogAction {
+  type: BlogActionTypes
+  payload: IBlogState
+}
+
+export function blogReducer(state: IBlogState, action: IBlogAction) {
   switch (action.type) {
     case BlogActionTypes.INITIALIZE_STATE: {
       return action.payload
