@@ -67,7 +67,7 @@ export const CallToAction = styled.a`
 export const Info = styled.ul`
   display: flex;
   gap: 2.4rem;
-  margin-top: 2.4rem;
+  margin-top: auto;
 
   li {
     display: flex;
