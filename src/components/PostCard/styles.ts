@@ -7,6 +7,7 @@ export const PostCardContainer = styled.article`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex: 1 1 396px;
 `
 
 export const Header = styled.header`

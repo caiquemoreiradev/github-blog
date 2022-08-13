@@ -5,8 +5,8 @@ export const HomeContainer = styled.div`
 `
 
 export const PostList = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(39.6rem, auto));
+  display: flex;
+  flex-wrap: wrap;
   gap: 3.2rem;
   margin-top: 4.8rem;
 `
