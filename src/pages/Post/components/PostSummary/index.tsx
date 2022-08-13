@@ -11,7 +11,7 @@ export function PostSummary() {
   return (
     <PostSummaryContainer>
       <nav>
-        <Link to="/">
+        <Link to="/github-blog/">
           <ChevronLeftIcon />
           voltar
         </Link>

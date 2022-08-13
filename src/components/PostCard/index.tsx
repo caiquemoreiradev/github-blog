@@ -2,7 +2,7 @@ import { PostCardContainer, Header, Content } from './styles'
 
 export function PostCard() {
   return (
-    <PostCardContainer to="/post/slug">
+    <PostCardContainer to="/github-blog/post/slug">
       <Header>
         <h2>JavaScript data types and data structures</h2>
         <span>Há 1 dia</span>
