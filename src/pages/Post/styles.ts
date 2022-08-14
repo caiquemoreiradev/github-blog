@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
-export const PostContainer = styled.div``
-
-export const Content = styled.div``
+export const PostContainer = styled.div`
+  padding: 0 2rem;
+`

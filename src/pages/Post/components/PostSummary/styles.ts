@@ -58,8 +58,15 @@ export const Link = styled(LinkRouterDOM)`
 
 export const Info = styled.ul`
   display: flex;
-  gap: 2.4rem;
-  margin-top: 0.8rem;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 1.8rem;
+
+  @media (min-width: 460px) {
+    gap: 2.4rem;
+    margin-top: 0.8rem;
+    flex-direction: row;
+  }
 
   li {
     display: flex;

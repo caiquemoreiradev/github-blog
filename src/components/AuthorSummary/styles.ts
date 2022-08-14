@@ -2,12 +2,17 @@ import styled from 'styled-components'
 
 export const AuthorSummaryContainer = styled.div`
   display: flex;
-  padding: 3.2rem 4rem;
+  flex-wrap: wrap;
+  padding: 3.2rem 2.5rem;
   gap: 3.2rem;
   background: ${(props) => props.theme['base-profile']};
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin-top: -8rem;
+
+  @media (min-width: 768px) {
+    padding: 3.2rem 4rem;
+  }
 `
 
 export const Avatar = styled.div`
@@ -15,13 +20,11 @@ export const Avatar = styled.div`
   overflow: hidden;
   width: 14.8rem;
   height: 14.8rem;
+  flex-shrink: 0;
+  margin: 0 auto;
 `
 
 export const Description = styled.div`
-  border-radius: 8px;
-  overflow: hidden;
-  width: 14.8rem;
-  height: 14.8rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -66,8 +69,15 @@ export const CallToAction = styled.a`
 
 export const Info = styled.ul`
   display: flex;
-  gap: 2.4rem;
-  margin-top: auto;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 1.8rem;
+
+  @media (min-width: 460px) {
+    gap: 2.4rem;
+    margin-top: 0.8rem;
+    flex-direction: row;
+  }
 
   li {
     display: flex;

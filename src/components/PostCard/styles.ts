@@ -4,13 +4,17 @@ import { Link } from 'react-router-dom'
 export const PostCardContainer = styled(Link)`
   background: ${(props) => props.theme['base-post']};
   border-radius: 10px;
-  padding: 3.2rem;
+  padding: 2.2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   text-decoration: none;
-  flex: 0 1 396px;
+  flex: 1 1 396px;
   transition: opacity 0.2s;
+
+  @media (min-width: 768px) {
+    padding: 3.2rem;
+  }
 
   &:hover {
     opacity: 0.7;
