@@ -23,7 +23,7 @@ export function blogReducer(state: IBlogState, action: IBlogAction) {
 
 export async function initializerState(): Promise<IBlogState> {
   try {
-    const response = await api.get<IAuthorInfo>('/users/Cahmoraes')
+    const response = await api.get<IAuthorInfo>('/users/caiquemoreiradev')
     const { data } = response
     return {
       authorInfo: data,

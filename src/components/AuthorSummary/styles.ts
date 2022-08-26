@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const AuthorSummaryContainer = styled.div`
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   padding: 3.2rem 2.5rem;
   gap: 3.2rem;
@@ -16,10 +17,10 @@ export const AuthorSummaryContainer = styled.div`
 `
 
 export const Avatar = styled.div`
-  border-radius: 8px;
+  border-radius: 80px;
   overflow: hidden;
-  width: 14.8rem;
-  height: 14.8rem;
+  width: 160px;
+  height: 160px;
   flex-shrink: 0;
   margin: 0 auto;
 `
@@ -43,7 +44,7 @@ export const Description = styled.div`
   }
 
   p {
-    margin-top: 0.8rem;
+    margin-top: 1rem;
   }
 `
 
@@ -68,10 +69,11 @@ export const CallToAction = styled.a`
 `
 
 export const Info = styled.ul`
+
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-  margin-top: 1.8rem;
+  margin-top: 2.8rem;
 
   @media (min-width: 460px) {
     gap: 2.4rem;

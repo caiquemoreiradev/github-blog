@@ -26,7 +26,7 @@ export function PostSummary() {
       <Info>
         <li>
           <GithubIcon />
-          <span>Cahmoraes</span>
+          <span>caiquemoreiradev</span>
         </li>
         <li>
           <CalendarIcon />
